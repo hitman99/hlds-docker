@@ -1,7 +1,7 @@
 
 # Build options
-IMAGE_NAME?="hlds"
-IMAGE_TAG?="alpha"
+IMAGE_NAME?="hitman99/hlds"
+IMAGE_TAG?="latest"
 
 STEAM_USER?="anonymous"
 STEAM_PASSWORD?=""
@@ -9,7 +9,7 @@ STEAM_PASSWORD?=""
 DOCKER_NO_CACHE?="false"
 
 # Publish options
-DOCKER_PUBLISH_NAME?="hlds/server"
+DOCKER_PUBLISH_NAME?="hitman99/hlds"
 DOCKER_PUBLISH_TAG?=$(IMAGE_TAG)
 
 # Test tools
