@@ -7,7 +7,7 @@ spec:
   selector:
       app: hlds
   ports:
-   - protocol: UDP
+  - protocol: UDP
     port: 27020
     targetPort: 27020
     name: hltv
