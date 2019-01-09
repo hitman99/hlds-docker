@@ -1,0 +1,41 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: hlds
+  namespace: half-life
+spec:
+  selector:
+    matchLabels:
+      app: hlds
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hlds
+    spec:
+      containers:
+      - name: debian
+        image: hitman99/hlds:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 27020
+        - containerPort: 27015
+        - containerPort: 26900
+        resources:
+          limits:
+            memory: "400Mi"
+        env:
+        - name: START_MAP
+          value: bounce
+        - name: ADMIN_NAME
+          value: "Admin"
+        - name: ADMIN_PASS
+          value: "adminpass"
+        - name: SERVER_NAME
+          value: "Kube half-life"
+        - name: GAME
+          value: "valve"
+        - name: MAXPLAYERS
+          value: "5"
+        - name: INSECURE
+          value: " "

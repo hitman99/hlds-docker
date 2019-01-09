@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hlds
+  namespace: half-life
+spec:
+  selector:
+      app: hlds
+  ports:
+  - protocol: TCP
+    port: 27015
+    targetPort: 27015
+    name: hdls
+  type: LoadBalancer
