@@ -32,7 +32,7 @@ spec:
         - name: ADMIN_PASS
           value: "adminpass"
         - name: SERVER_NAME
-          value: "Kube half-life"
+          value: "Hitman's Kubernetes "
         - name: GAME
           value: "valve"
         - name: MAXPLAYERS

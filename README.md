@@ -1,6 +1,4 @@
-[![License Apache 2.0](https://goo.gl/joRzTI)](https://github.com/artem-panchenko/counter-strike-docker/blob/master/LICENSE)
-
-![Half-Life Logo](http://files.gamebanana.com/img/ico/sprays/51f5acee815f0.png)
+![Half-Life Logo](https://vignette.wikia.nocookie.net/half-life/images/d/dc/Lambda_logo.svg/revision/latest/scale-to-width-down/250?cb=20100327174546&path-prefix=en)
 
 # Docker image for Half-Life Dedicated Server
 
