@@ -2,7 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: hlds
-  namespace: half-life
+  namespace: hlds
 spec:
   selector:
     matchLabels:
@@ -14,8 +14,8 @@ spec:
         app: hlds
     spec:
       containers:
-      - name: debian
-        image: hitman99/hlds:latest
+      - name: hlds
+        image: hitman99/hlds:0.4
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 27020
@@ -28,14 +28,20 @@ spec:
         - name: START_MAP
           value: bounce
         - name: ADMIN_NAME
-          value: "Admin"
+          valueFrom:
+            secretKeyRef:
+              name: hlds
+              key: ADMIN_NAME
         - name: ADMIN_PASS
-          value: "adminpass"
+          valueFrom:
+            secretKeyRef:
+              name: hlds
+              key: ADMIN_PASS
         - name: SERVER_NAME
-          value: "Hitman's Kubernetes "
+          value: "HLDS on K8S "
         - name: GAME
           value: "valve"
         - name: MAXPLAYERS
-          value: "5"
+          value: "10"
         - name: INSECURE
           value: " "

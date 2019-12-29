@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: hlds
-  namespace: half-life
+  namespace: hlds
 spec:
   selector:
       app: hlds
